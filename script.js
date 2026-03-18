@@ -61,7 +61,7 @@ function formatTime(milliseconds, showMilliseconds) {
     const seconds = totalSeconds % 60;
     const remainingMilliseconds = milliseconds % 1000;
     return showMilliseconds 
-        ? `${hours > 0 ? hours + 'h ' : ''}${minutes}m ${seconds}s ${remainingMilliseconds}ms`
+        ? `${hours > 0 ? hours + 'h ' : ''}${minutes}m ${seconds}s ${remainingMilliseconds.toString().padStart(3, '0')}ms`
         : `${hours > 0 ? hours + 'h ' : ''}${minutes}m ${seconds}s`;
 }
 
